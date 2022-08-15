@@ -1,5 +1,7 @@
 GoLang + MongoDB + Redis RESTful Application Starter
 ----------------------------------------------------
+[![Go Report Card](https://goreportcard.com/badge/github.com/ebubekiryigit/golang-mongodb-rest-api-starter)](https://goreportcard.com/report/github.com/ebubekiryigit/golang-mongodb-rest-api-starter)
+
 This project is a 'Boilerplate' or 'Starter' to build RESTful
 Applications and microservices using
 GoLang ([Gin](https://github.com/gin-gonic/gin) HTTP web framework), MongoDB and Redis.
