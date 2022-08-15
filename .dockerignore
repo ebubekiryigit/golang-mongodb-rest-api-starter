@@ -1,0 +1,9 @@
+# logs
+logs/
+
+# IDE files
+.idea/
+
+vendor/
+
+.gitignore
