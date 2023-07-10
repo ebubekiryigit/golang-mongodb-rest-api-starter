@@ -26,7 +26,7 @@ services:
       - backend
 
   redis:
-    image: redis:6.2-bullseye
+    image: redis:bullseye
     restart: unless-stopped
     ports:
       - "6379:6379"
