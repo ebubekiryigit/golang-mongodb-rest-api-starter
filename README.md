@@ -33,7 +33,7 @@ Prerequisites
 
 - Git
 - Docker
-- [Go 1.19](https://go.dev/doc/install) and above
+- [Go 1.20](https://go.dev/doc/install) and above
 
 _If you are not using Docker, you should also have:_
 
