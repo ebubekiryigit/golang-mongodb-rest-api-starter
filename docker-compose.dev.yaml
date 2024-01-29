@@ -1,0 +1,37 @@
+version: '3'
+
+services:
+
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app
+    restart: unless-stopped
+    depends_on:
+      - redis
+      - mongo
+    networks:
+      - backend
+
+  mongo:
+    image: mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    networks:
+      - backend
+
+  redis:
+    image: redis:bullseye
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    networks:
+      - backend
+
+networks:
+  backend:
