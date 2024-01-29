@@ -57,6 +57,9 @@ cd go-rest-api-starter
 ```bash
 # Build & Create Docker Containers
 docker-compose up -d
+
+# Or Initiate Development Mode Server (With Hot Reload Feature)
+docker-compose -f docker-compose.dev.yaml up --build -d
 ```
 
 #### Using Local Environment

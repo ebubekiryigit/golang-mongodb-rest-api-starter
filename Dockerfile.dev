@@ -1,0 +1,24 @@
+FROM golang:1.20-bullseye
+
+RUN apt update
+
+WORKDIR /app
+
+COPY go.mod go.sum ./
+
+RUN go mod download
+
+COPY . .
+
+# Change .env with docker
+COPY .env.docker ./.env
+
+# Expose port 8080 to the outside world
+EXPOSE 8080
+
+# Install gin
+RUN go install github.com/codegangsta/gin@latest
+RUN go install -mod=mod github.com/githubnemo/CompileDaemon
+
+# Run the executable using gin
+ENTRYPOINT CompileDaemon --build="go build main.go" --command=./main
